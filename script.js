@@ -1,5 +1,5 @@
 // --- Tab Switching Logic ---
-const tabs = ['rankup', 'exp', 'ttk', 'raid'];
+const tabs = ['rankup', 'ttk', 'raid'];
 function switchTab(activeTab) {
     tabs.forEach(tab => {
         const panel = document.getElementById(`panel-${tab}`);
@@ -32,18 +32,6 @@ function formatNumber(num) {
 }
 
 // --- Calculator Logics ---
-function calculateEXP() {
-    const currentXp = getNumberValue('currentXp');
-    const xpToLevel = getNumberValue('xpToLevel');
-    const xpPerAction = getNumberValue('xpPerAction');
-    const xpNeeded = xpToLevel - currentXp;
-    if (xpNeeded <= 0 || xpPerAction <= 0) {
-         document.getElementById('expResult').innerText = '0';
-         return;
-    }
-    const actionsNeeded = Math.ceil(xpNeeded / xpPerAction);
-    document.getElementById('expResult').innerText = formatNumber(actionsNeeded);
-}
 
 function calculateTTK() {
     const enemyHealth = getNumberValue('enemyHealth');
