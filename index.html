@@ -22,7 +22,36 @@
         }
     </script>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Auto-detect device capability and set class BEFORE styles load -->
+<script>
+(function(){
+  function isLowPower(){
+    try{
+      if (matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return true;
+      var nav = navigator || {};
+      if (nav.connection) {
+        if (nav.connection.saveData) return true;
+        var et = (nav.connection.effectiveType || '').toLowerCase();
+        if (et.indexOf('2g') !== -1 || et.indexOf('3g') !== -1) return true;
+      }
+      if (nav.deviceMemory && nav.deviceMemory <= 2) return true;
+      if (nav.hardwareConcurrency && nav.hardwareConcurrency <= 2) return true;
+      if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) return true;
+    }catch(e){}
+    return false;
+  }
+
+  var pref = localStorage.getItem('ae_low_power');
+  if (pref === null) {
+    pref = isLowPower() ? '1' : '0';
+    localStorage.setItem('ae_low_power', pref);
+  }
+  if (pref === '1') document.documentElement.classList.add('ae-low-power');
+  else document.documentElement.classList.add('ae-high-power');
+})();
+</script>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen flex items-center justify-center p-4">
 
