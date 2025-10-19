@@ -19,10 +19,16 @@ body {
     font-family: 'Poppins', 'Yusei Magic', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     background-color: var(--bg-1);
     color: var(--muted);
+
     background-image:
+        linear-gradient(180deg, rgba(6,7,18,0.6), rgba(6,7,18,0.6)),
         radial-gradient(circle at 15% 20%, rgba(124,58,237,0.10) 0%, transparent 35%),
         radial-gradient(circle at 80% 75%, rgba(0,212,255,0.06) 0%, transparent 40%),
-        linear-gradient(180deg, rgba(255,255,255,0.01), transparent 30%);
+        url('assets/bg.webp');
+    background-size: cover, cover, cover, cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
