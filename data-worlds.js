@@ -1,0 +1,26 @@
+const worldData = { 
+    "Earth City": { enemies: { "Kriluni": 5e3, "Ymicha": 2.3e5, "Tian Shan": 5e6, "Kohan": 3e7, "Picco": 1e8, "Koku": 2.4e8, "Kid Kohan": 2.5e15 }},
+    "Windmill Island": { enemies: { "Nomi": 4.5e9, "Usup": 7e10, "Robins": 2.5e11, "Senji": 1.2e12, "Zaro": 5e13, "Loffy": 1.2e14, "Shanks": 5e21 }},
+    "Soul Society": { enemies: { "Hime": 1.5e14, "Ichige": 2.5e15, "Uryua": 5.5e16, "Rakiu": 1.6e17, "Yoichi": 8.5e17, "Kahara": 1e18, "Eizen": 2.5e24 }},
+    "Cursed School": { enemies: { "Itodo": 1.5e18, "Nebara": 5e19, "Magum": 1.1e20, "Meki": 4.75e20, "Tage": 9.69e21, "Gajo": 5e22, "Sakuni": 1.2e26 }},
+    "Slayer Village": { enemies: { "Nazuki": 1e23, "Tenjar": 5e23, "Zentsu": 2.5e24, "Insake": 1.25e25, "Tamoka": 6.26e25, "Shinabe": 3.12e26, "Rangoki": 3.12e34 }},
+    "Solo Island": { enemies: { "Weak Sung": 6.25e26, "Green Goblin": 3.12e27, "White Tiger": 1.56e28, "Cha": 7.81e28, "Choi": 3.91e29, "Solo Sung": 1.95e30, "Statue of God": 1.95e38 }},
+    "Clover Village": { enemies: { "Noalle": 7.8e30, "Megna": 8e31, "Finrel": 8.43e32, "Aste": 9.08e33, "Yune": 9.57e34, "Yemi": 1.01e36, "Novi Chroni": 1.01e44 }},
+    "Leaf Village": { enemies: { "Sekuri": 2.69e35, "Kid Norto": 2.29e36, "Kid Seske": 2.41e37, "Kakashki": 2.54e38, "Jiria": 2.68e39, "Tsuni": 2.82e40, "Itechi": 2.82e48, "Madera": 5.64e48 }},
+    "Spirit Residence": { enemies: { "Ken": 5e40, "Aira": 4e41, "Jiji": 4.22e42, "Momo": 4.44e43, "Alien": 4.68e44, "Saiko": 4.94e45, "Ken Turbo": 4.94e53 }},
+    "Magic Hunter City": { enemies: { "Lero": 3e46, "Gone": 2.4e47, "Karapik": 2.53e48, "Killas": 2.67e49, "Hisoker": 2.81e50, "Illumio": 2.96e51, "Killas Godspeed": 2.96e59 }},
+    "Titan City": { enemies: { "Armin": 5e51, "Annie": 4e52, "Mikala": 4.22e53, "Rainar": 4.44e54, "Ervin": 4.68e55, "Lavi": 4.94e56, "Eran": 4.94e64 }},
+    "Village of Sins": { enemies: { "Diyana": 9.9e56, "Kyng": 7.92e57, "Gowen": 8.35e58, "Merlu": 8.8e59, "Bane": 9.27e60, "Melyon": 9.77e61, "Esanor": 9.77e69 }},
+    "Kaiju Base": { enemies: { "Kefka": 5e62, "Rano": 4.5e63, "Ihero": 4.74e64, "Kikoi": 5e65, "Sosiro": 5.27e66, "Meena": 5.55e67, "Number 8": 5.55e75 }},
+    "Tempest Capital": { enemies: { "Gobito": 2.73e68, "Gabido": 2.73e69, "Sakai": 4.1e70, "Hakamaru": 4.32e71, "Benitaro": 4.55e72, "Rimaru": 4.79e73, "Valzora": 4.79e81 }},
+    "Virtual City": { enemies: { "Lisbeta": 9.58e73, "Silica": 7.66e74, "Klain": 8.08e75, "Yai": 8.71e76, "Asana": 9.18e77, "Beater": 9.67e78, "The Paladin": 9.67e86 }},
+    "Cairo": { enemies: { "Speedy": 1.93e79, "Cesar": 1.54e80, "Joseph": 1.63e81, "Polyreff": 1.75e82, "Avdoli": 1.85e83, "Jokaro": 1.94e84, "Dino": 1.95e92 }},
+    "Ghoul City": { enemies: { "Hideyo": 6.79e85, "Joozu": 5.43e86, "Madyo": 5.73e87, "Kotaro": 6.17e88, "Toaoka": 6.51e89, "Kanny": 6.86e90, "Arama": 6.86e98 }},
+    "Chainsaw City": { enemies: { "Kabeni": 3.95e93, "Benji": 4.15e94, "Powa": 4.36e95, "Aoki": 4.59e96, "Raza": 4.83e97, "Makomi": 5.09e98, "Mr Chainsaw": 5.09e102, "Hero of Hell": 5.09e106 }},
+    "Tokyo Empire": { enemies: { "Akiki": 2.04e99, "Arter": 1.63e100, "Shinro": 1.47e101, "Tameki": 1.58e102, "Iriso": 1.67e103, "Witch Queen": 1.75e104, "Leonardo": 1.76e108, "Bansho": 1.76e112 }},
+    "Green Planet": { enemies: { "Bulam": 1.76e111, "Young Kohan": 1.41e112, "Armored Kriluni": 1.27e113, "Giniy": 1.37e114, "Vegeti": 1.44e115, "Lord Frizzi": 1.52e116, "Koku SSJ": 1.52e120, "Frizzi Final Form": 1.52e124 }},
+    "Hollow World": { enemies: { "Ohime": 1.01e120, "Ichiga": 8e120, "Chaddo": 7.28e121, "Zayrel": 7.85e122, "Uloqi": 8.27e123, "Grimmi": 8.72e124, "Cifer": 8.72e127, "Vasto Ichige": 8.72e131 }},
+    "Shadow Academy": { enemies: { "Cyd": 3.54e127, "Zeta": 2.83e128, "Delta": 2.55e129, "Beta": 2.75e130, "Gamma": 2.9e131, "Alpha": 3.05e132, "Blood Queen": 3.05e136, "Shadow": 3.05e140 }},
+    "Z City": { enemies: { "Crabby": 2.29e136, "Mantis": 4.57e137, "Tatsura": 9.16e138, "Ganos": 1.83e140, "King of Seas": 3.66e141, "Bald Man": 7.33e142, "Lord Boro": 7.33e146, "Galaxy Hunter": 7.33e150 }}
+};
+

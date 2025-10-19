@@ -1,0 +1,58 @@
+/* By setting the font on the root html element, all other elements should inherit it */
+html {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(131, 56, 236, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(251, 86, 7, 0.15) 0%, transparent 40%);
+}
+.calculator-card {
+    background-color: rgba(28, 28, 45, 0.8);
+    backdrop-filter: blur(10px);
+    border: 2px solid #8338ec;
+    box-shadow: 0 0 20px rgba(131, 56, 236, 0.5);
+}
+.tab-btn {
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+.tab-btn.active {
+    color: #fb5607;
+    border-bottom-color: #fb5607;
+}
+.input-field, .select-field {
+    background-color: #131320;
+    border: 1px solid #3a3a5a;
+    color: #e0e0e0;
+}
+.select-field {
+     appearance: none; /* Remove default browser styling for select */
+    padding-right: 2.5rem; /* Space for custom arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20fill%3D%22%23e0e0e0%22%20d%3D%22M208.5%2096L128%20176.5L47.5%2O96H208.5z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.25em;
+}
+.input-field:focus, .select-field:focus {
+    outline: none;
+    border-color: #8338ec;
+    box-shadow: 0 0 10px rgba(131, 56, 236, 0.5);
+}
+.result-box {
+    background-color: #131320;
+    border: 1px dashed #fb5607;
+    min-height: 50px;
+}
+.btn-calculate {
+    background: linear-gradient(45deg, #8338ec, #fb5607);
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.btn-calculate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(131, 56, 236, 0.4);
+}
