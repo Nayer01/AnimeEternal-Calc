@@ -11,7 +11,7 @@
 
 /* By setting the font on the root html element, all other elements should inherit it */
 html {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 14px; /* slightly larger for readability */
 }
 
