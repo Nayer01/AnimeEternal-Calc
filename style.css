@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
 :root {
     --bg-1: #1a1a2e;
     --card-bg: rgba(28, 28, 45, 0.85);
@@ -9,13 +7,9 @@
     --input-bg: #131320;
 }
 
-/* By setting the font on the root html element, all other elements should inherit it */
-html {
-    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 14px; /* slightly larger for readability */
-}
-
+/* Force chosen font on body so it's not overridden by other rules */
 body {
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: var(--bg-1);
     color: var(--muted);
     background-image:
